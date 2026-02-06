@@ -1,16 +1,18 @@
-# This is a sample Python script.
+import yfinance as yf
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# 애플(AAPL) 객체 생성
+apple = yf.Ticker("AAPL")
 
+# 1. 기업의 기본 정보 (섹터, 시가총액, PER 등)
+print(apple.info)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# 2. 역사적 주가 데이터 (최근 1개월, 1일 간격)
+hist = apple.history(period="1mo")
+print(hist)
 
+# 3. 배당금 및 주식 분할 정보
+print(apple.actions)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# 4. 재무제표 (연간/분기)
+print(apple.financials)
+print(apple.quarterly_balance_sheet)
