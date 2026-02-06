@@ -16,8 +16,11 @@ def print_company_info_table(data: List[BaseModel]):
     # 2. 컬럼명 매핑 (영문 -> 한글)
     column_mapping = {
         'name': '종목명',
-        'current_price': '현재가',
-        'target_price': '목표가',
+        'current_price': '현재가(USD/KRW)',
+        'currency': '단위',
+        'exchange_rate': '현재 환율',
+        'price_krw': '현재가(원)',
+        'target_price': '목표가(USD/KRW)',
         'upside_potential': '상승여력(%)'
     }
     df = df.rename(columns=column_mapping)
