@@ -1,5 +1,5 @@
-from src.stock_info_crowler.core import StockFetcher, get_market_symbols, MarketType
-from src.stock_info_crowler.utils import print_company_info_table, get_current_usd_krw
+from src.stock_info_crowler.core import StockFetcher
+from src.stock_info_crowler.utils import print_company_info_table, get_current_usd_krw, get_market_symbols, MarketType
 
 
 def main():
