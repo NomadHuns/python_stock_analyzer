@@ -1,10 +1,10 @@
-from src.stock_info_crowler.core import StockFetcher
+from src.stock_info_crowler.core import StockFetcher, get_market_symbols, MarketType
 from src.stock_info_crowler.utils import print_company_info_table, get_current_usd_krw
 
 
 def main():
     usd_krw = get_current_usd_krw()
-    symbols = ["AAPL", "NVDA", "005930.KS"]
+    symbols = get_market_symbols(MarketType.KOSPI, limit=5)
 
     # 2. 데이터를 가져올 때 환율 정보 전달
     results = []
