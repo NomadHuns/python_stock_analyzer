@@ -1,1 +1,2 @@
 from .stock_fetcher import StockFetcher
+from .stock_analyzer import get_top_upside_stocks
